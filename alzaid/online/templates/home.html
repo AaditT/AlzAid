@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito" rel="stylesheet">
+  </head>
+  <style>
+  .myButton {
+  	-moz-box-shadow:inset 0px 39px 8px -24px #00a849;
+  	-webkit-box-shadow:inset 0px 39px 8px -24px #00a849;
+  	box-shadow:inset 0px 39px 8px -24px #00a849;
+  	background-color:#2e851c;
+  	-moz-border-radius:41px;
+  	-webkit-border-radius:41px;
+  	border-radius:41px;
+  	border:1px solid #ffffff;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#ffffff;
+  	font-family:Arial;
+  	font-size:28px;
+  	padding:16px 46px;
+  	text-decoration:none;
+  	text-shadow:0px 2px 7px #000000;
+  }
+  .myButton:hover {
+  	background-color:#00a849;
+  }
+  .myButton:active {
+  	position:relative;
+  	top:1px;
+  }
+  .myButtonLogin {
+  	-moz-box-shadow:inset 0px 39px 8px -24px #b6c215;
+  	-webkit-box-shadow:inset 0px 39px 8px -24px #b6c215;
+  	box-shadow:inset 0px 39px 8px -24px #b6c215;
+  	background-color:#82851d;
+  	-moz-border-radius:41px;
+  	-webkit-border-radius:41px;
+  	border-radius:41px;
+  	border:1px solid #ffffff;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#ffffff;
+  	font-family:Arial;
+  	font-size:28px;
+  	padding:16px 46px;
+  	text-decoration:none;
+  	text-shadow:0px 2px 7px #000000;
+  }
+  .myButtonLogin:hover {
+  	background-color:#99a310;
+  }
+  .myButtonLogin:active {
+  	position:relative;
+  	top:1px;
+  }
+  body {
+    font-family: 'Nunito', sans-serif;
+
+  }
+  .container {
+    position: relative;
+    width: 200px;
+    }
+  .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:1;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.standout {
+  background-color: #bfefff;
+  width: 300px;
+}
+* {
+  box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 200px;
+}
+.columnsecond {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 200px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+  </style>
+  <body>
+    <a href="/" class="myButtonLogin" align="left"> <<< Home</a>
+    <h1 align="center"><strong>{{user_name}}'s Account</strong></h1>
+    <div class="row">
+      <div class="column" style="background-color:#eae7dc;">
+        <form action="/upload/{{user_name}}" method="POST" enctype=multipart/form-data>
+          <h3> Add a Contact </h3>
+          Name: <input type="text" name="name">
+          <br><br>
+          Photo: <input type="file" name="file">
+          <br><br>
+          <input type="submit" value="Upload">
+        </form>
+      </div>
+      <div class="column" style="background-color:#d8c3a5 ;">
+        <h3> Trying to Recognize Someone? </h3>
+        <a href="/detect" class="myButton">Detect Face</a>
+      </div>
+    </div>
+
+
+
+<div style="background-color: #FFB6C1;">
+    <h2> Your Contacts: </h2>
+    <div class="row">
+    {% for face in face_list %}
+    <div class="columnsecond">
+    <div class="container">
+      <img width="250" height="200" src="/static/faces/{{user_name}}/{{face}}"><br>
+      <div class="overlay">{{face.replace(".jpg","").title()}}</div>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+
+
+  </body>
+</html>
