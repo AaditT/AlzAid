@@ -1,5 +1,7 @@
 # [AlzAid](https://devpost.com/software/alzaid-alzheimer-s-assistant) - Best Web Security AND Best Pitch at [LaunchHacksI](https://launchhacks.tech/)!
 
+Project URL: https://devpost.com/software/alzaid-alzheimer-s-assistant
+
 ## Inspiration
 
 AlzAid is a revolutionary new software assistant specifically designed to help people with Alzheimer’s disease, memory loss, and/or dementia. AlzAid enables people to quickly identify the faces of their friends and loved ones, using a computerized application that employs face recognition technology to assist the user. AlzAid is a web-based app that can be deployed as a system boarded onto a multitude of portable devices such as a wristband.
