@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+  </head>
+  <style>
+    .myButtonLogin {
+    	-moz-box-shadow:inset 0px 39px 8px -24px #b6c215;
+    	-webkit-box-shadow:inset 0px 39px 8px -24px #b6c215;
+    	box-shadow:inset 0px 39px 8px -24px #b6c215;
+    	background-color:#82851d;
+    	-moz-border-radius:41px;
+    	-webkit-border-radius:41px;
+    	border-radius:41px;
+    	border:1px solid #ffffff;
+    	display:inline-block;
+    	cursor:pointer;
+    	color:#ffffff;
+    	font-family:Arial;
+    	font-size:28px;
+    	padding:16px 46px;
+    	text-decoration:none;
+    	text-shadow:0px 2px 7px #000000;
+    }
+    .myButtonLogin:hover {
+    	background-color:#99a310;
+    }
+    .myButtonLogin:active {
+    	position:relative;
+    	top:1px;
+    }
+  </style>
+  <body>
+    <a href="/" class="myButtonLogin" align="left"> <<< Home</a>
+    <img src="{{ url_for('video_feed') }}">
+    <form action="/loginauth/" method="post">
+    <div class="content_section" style="display: none;">
+      See me no more
+    <button name="loginBtn" type="submit">Login</button>
+  </div>
+  </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito" rel="stylesheet">
+
+</head>
+  <style>
+  body {
+    font-family: 'Nunito', sans-serif;
+
+  }
+  .image-example {
+    width: 30vw;
+    min-width: 100px;
+    text-align: center;
+    height: 300px;
+    margin: 5% auto;
+    background-color: #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+  </style>
+  <title>Upload your photo and name</title>
+  <center>
+  <h1><strong>Register</strong></h1>
+  <div class="image-example">
+  <form action="/register" method="POST" enctype=multipart/form-data>
+    Name:<input type="text" value="name" name="name">
+    <br><br><br>
+    Your Address: <input type="text" value="address" name="address">
+      <br><br><br>
+    Your Photo: <input type="file" name="file">
+    <br><br><br>
+    <input type="submit" value="Register">
+  </form>
+</div>
+</html>
