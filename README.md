@@ -1,4 +1,4 @@
-# alzpi
+# [AlzAid]("https://devpost.com/software/alzaid-alzheimer-s-assistant") - Best Web Security App and Best Pitch at [LaunchHacksI]("https://launchhacks.tech/")!
 
 ## Inspiration
 
