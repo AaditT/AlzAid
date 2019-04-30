@@ -1,5 +1,7 @@
 # [AlzAid](https://devpost.com/software/alzaid-alzheimer-s-assistant) - Best Web Security AND Best Pitch at [LaunchHacksI](https://launchhacks.tech/)!
 
+## By Srihari Nanniyur and Aadit Trivedi
+
 Project URL: https://devpost.com/software/alzaid-alzheimer-s-assistant
 
 ## Inspiration
