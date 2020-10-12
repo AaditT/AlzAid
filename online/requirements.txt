@@ -161,6 +161,6 @@ verboselogs==1.7
 wcwidth==0.1.7
 weather-api==1.0.6
 webencodings==0.5.1
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 
 cmake==3.13.3
